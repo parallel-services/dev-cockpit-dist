@@ -10,71 +10,107 @@ au dépôt de code.
 ## Les modules
 
 Chacun s'allume ou s'éteint dans **Réglages › Modules** : ce qui est éteint quitte la barre, les
-raccourcis et les notifications. Les captures viennent du jeu de démonstration, pas d'un vrai compte.
+raccourcis et les notifications. La barre de gauche les range en quatre groupes — Flux, Qualité,
+Pilotage, Automatisation. Les captures viennent du jeu de démonstration, pas d'un vrai compte.
+
+## Flux
 
 ### Aujourd'hui
-Ce qui t'attend partout, reviews en tête : agents qui attendent une réponse, sorties à trancher, PR
-bloquées et cartes en cours.
+Ce qui t'attend dans les autres vues actives, en un coup d'œil.
 
 ![Aujourd'hui](docs/screenshots/aujourdhui.png)
 
 ### Reviews
-Les PR où ta review est demandée ou à refaire et les cartes « To Review », les plus anciennes
-d'abord. j et k circulent, Entrée ouvre.
+Tout ce qui attend ta review, avec le compteur de la barre de menus. j et k circulent, Entrée ouvre.
 
 ![Reviews](docs/screenshots/reviews.png)
 
-### Mes PR
-Tes PR ouvertes : approbations, changements demandés, CI, conflits et threads non résolus.
+### Todo
+Les cartes à prendre dans le sprint courant de tes boards.
 
-![Mes PR](docs/screenshots/mes-pr.png)
+![Todo](docs/screenshots/todo.png)
 
-### En cours
-Tes cartes de la branche jusqu'au merge, avec l'étape atteinte et ce qui bloque.
+### Triage
+Les bugs remontés dans Notion, triés et transformés en cartes YouTrack.
 
-![En cours](docs/screenshots/en-cours.png)
+![Triage](docs/screenshots/triage.png)
+
+### Mes remontées
+Les bugs que tu as remontés dans Notion, et ce qu'ils deviennent.
+
+![Mes remontées](docs/screenshots/mes-remontees.png)
+
+### Mon travail
+Tes cartes en cours avec leur parcours, puis tes PR sans carte : branche, CI, reviews et conflits.
+
+![Mon travail](docs/screenshots/mon-travail.png)
 
 ### Agents
 Tes sessions Claude Code ; celles qui attendent une réponse passent devant.
 
 ![Agents](docs/screenshots/agents.png)
 
-### Threads
-Les fils où tu es attendu : réponses, mentions, threads non résolus sur tes PR.
+## Qualité
 
-![Threads](docs/screenshots/threads.png)
+### CI & Sécurité
+La santé de ce qui part en production : branche principale rouge, jobs instables et durées des
+workflows d'un côté, alertes Dependabot, code scanning et secret scanning de l'autre, avec un
+correctif guidé dans Conductor ou le terminal.
 
-### CI
-La santé de la CI sur main, les workflows qui cassent le plus souvent et les jobs instables.
-
-![CI](docs/screenshots/ci.png)
+![CI & Sécurité](docs/screenshots/ci-securite.png)
 
 ### Déploiements
-Ce qui est parti en recette ou en production, et ce qui attend encore.
+Les PR mergées, environnement par environnement : en recette, en prod ou pas encore déployées.
 
 ![Déploiements](docs/screenshots/deploiements.png)
 
-### Factory
-Les sorties des agents à trancher : accepter, rejeter ou reporter, brouillon de carte à l'appui.
+### Migrations
+Les PR ouvertes qui touchent une migration : qui doit la relire, depuis combien de jours ouvrés,
+et le SQL qu'elle joue.
 
-![Factory](docs/screenshots/factory.png)
+![Migrations](docs/screenshots/migrations.png)
 
-### KPI de fabrication
-Débit, durées et fluidité par sprint, par équipe et par période.
+## Pilotage
 
-![KPI](docs/screenshots/kpi.png)
+Un seul écran, trois onglets, à partir d'une seule copie locale de l'historique.
 
-### Indicateurs
+### Sprint
+Le burndown du sprint et sa rétro. Les restes s'arrêtent au jour du jour : la safe zone continue
+jusqu'au bout, les courbes de réalisé ne racontent que ce qui est connu.
+
+![Sprint](docs/screenshots/pilotage-sprint.png)
+
+### Équipe
+Les KPI de fabrication : débit, durées et fluidité par sprint, par équipe et par période.
+
+![Équipe](docs/screenshots/pilotage-equipe.png)
+
+### Moi
 Tes propres chiffres face à ceux de l'équipe, calculés sur ta machine.
 
-![Indicateurs](docs/screenshots/indicateurs.png)
+![Moi](docs/screenshots/pilotage-moi.png)
 
-### Composer son cockpit
+## Automatisation
+
+### À trancher
+Les sorties des agents à trancher : accepter, rejeter ou reporter, brouillon de carte à l'appui.
+
+![À trancher](docs/screenshots/a-trancher.png)
+
+### Historique
+Les enchaînements, actions, runs Factory et appels MCP passés, étape par étape : ce qui a été
+écrit, ce qui a échoué, et où reprendre.
+
+![Historique](docs/screenshots/historique.png)
+
+## Composer son cockpit
+
 Les modules s'activent un par un, avec leurs dépendances et des profils tout faits.
 
 ![Modules](docs/screenshots/modules.png)
 
-### Visite guidée
+## Visite guidée
+
 Au premier lancement, un pas à pas éclaire les zones de l'app une à une. Il se relance depuis la
 palette (⌘K) ou l'aide (?).
 
