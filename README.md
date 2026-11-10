@@ -170,10 +170,11 @@ Les modules s'activent un par un, avec leurs dépendances et des profils tout fa
 ## Visite guidée
 
 Au premier lancement, un pas à pas éclaire les zones de l'app une à une : la barre des vues,
-l'en-tête, le filtre d'équipe, la palette, les raccourcis et Réglages › Modules. Il enchaîne sur
-un tour des modules, qui passe sur chaque vue — les trois hors de la barre comprises — puis sur
-chaque source. Les étapes d'un module éteint sont sautées. Les deux visites se relancent depuis la
-palette (⌘K) ou Réglages › À propos.
+l'en-tête, le filtre d'équipe, la palette, les raccourcis et Réglages › Modules. Sa dernière étape
+propose un **tour des modules**, qui passe sur chaque vue — les trois hors de la barre comprises —
+puis sur chaque source. Les étapes d'un module éteint sont sautées : la visite ne parle jamais
+d'une fonction que tu n'as pas. La palette (⌘K, « Visite guidée ») et Réglages › À propos
+relancent le pas à pas.
 
 ![Visite guidée](docs/screenshots/visite-guidee.png)
 
