@@ -167,6 +167,41 @@ Les modules s'activent un par un, avec leurs dépendances et des profils tout fa
 
 ![Modules](docs/screenshots/modules.png)
 
+## Choisir son ambiance
+
+Une **ambiance** règle la peau de l'app : la matière des surfaces, la profondeur, la typographie et
+le mouvement. Elle ne touche ni aux vues, ni à ce qu'elles montrent, ni à la densité des listes —
+celle-ci reste là où tu l'as mise. Trois sont livrées, et le réglage fin des couleurs reste
+dessous, en partant de celle que tu as choisie.
+
+![Ambiances](docs/screenshots/ambiances.png)
+
+### Précision
+Le thème d'origine, et le défaut : monochrome froid, un seul accent bleu, surfaces opaques.
+
+![Précision](docs/screenshots/ambiance-precision.png)
+
+### Cockpit
+Poste de pilotage sombre : accent teal, titres de section en mono, et un halo d'accent sur la ligne
+sélectionnée, les pastilles de CI et le bouton principal.
+
+![Cockpit](docs/screenshots/ambiance-cockpit.png)
+
+### Verre
+Panneaux translucides sur un fond en dégradés, lignes de liste en cartes espacées, panneaux
+décollés des bords. Sur une webview qui ne sait pas flouter, les surfaces redeviennent opaques
+toutes seules.
+
+![Verre](docs/screenshots/ambiance-verre.png)
+
+Chaque ambiance a sa variante claire et sa variante sombre ; le mode (Système / Clair / Sombre)
+décide laquelle s'affiche. Un thème est **refusé s'il ne se lit pas** : chaque paire texte/fond doit
+tenir le contraste AA de 4,5:1 dans les deux variantes — pour les surfaces translucides, contre le
+pire fond possible derrière elles — et le rouge et l'orange restent réservés à l'urgence réelle.
+`prefers-reduced-motion` coupe toute animation, quelle que soit l'ambiance choisie.
+
+Un thème s'exporte, s'importe et se partage par la configuration d'équipe.
+
 ## Visite guidée
 
 Au premier lancement, un pas à pas éclaire les zones de l'app une à une : la barre des vues,
