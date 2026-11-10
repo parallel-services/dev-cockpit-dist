@@ -25,7 +25,8 @@ masqué ne compte nulle part.
 
 ### Reviews
 Tout ce qui attend ta review, avec le compteur de la barre de menus. j et k circulent, Entrée ouvre.
-Ce qui bouge sans qu'on te l'ait demandé devient un signal, rangé derrière son bouton.
+Les badges de risque y signalent une grosse PR, une migration, des fichiers sensibles. Ce qui bouge
+sans qu'on te l'ait demandé devient un signal, rangé derrière son bouton.
 
 ![Reviews](docs/screenshots/reviews.png)
 
@@ -83,7 +84,8 @@ et le SQL qu'elle joue.
 
 ### Release
 Préparer une version : le tag suivant, le commit cible, les traductions en attente, les migrations
-à relire et le changelog que les cartes ont écrit. Rien n'est publié depuis ici sans confirmation.
+à relire et le changelog que les cartes ont écrit. **Aucune écriture** : la vue prépare, elle ne
+crée pas la release et ne publie rien.
 
 ![Release](docs/screenshots/release.png)
 
@@ -147,8 +149,9 @@ notifications se taisent et les reviews ne te sont plus adressées jusqu'au reto
 ## Ce qui alimente le cockpit
 
 ### Les comptes
-GitHub, YouTrack, Notion, Sentry. Les jetons vivent dans le trousseau du système, jamais dans un
-fichier ; tout le réseau part du back Rust, et rien ne sort sans passer par le masquage.
+GitHub et YouTrack se connectent ici ; Notion et Sentry ont leur propre onglet. Les jetons vivent
+dans le trousseau du système, jamais dans un fichier ; tout le réseau part du back Rust, et rien ne
+sort sans passer par le masquage.
 
 ![Comptes](docs/screenshots/comptes.png)
 
