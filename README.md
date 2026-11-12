@@ -24,9 +24,15 @@ masqué ne compte nulle part.
 ![Aujourd'hui](docs/screenshots/aujourdhui.png)
 
 ### Reviews
-Tout ce qui attend ta review, avec le compteur de la barre de menus. j et k circulent, Entrée ouvre.
-Les badges de risque y signalent une grosse PR, une migration, des fichiers sensibles. Ce qui bouge
-sans qu'on te l'ait demandé devient un signal, rangé derrière son bouton.
+Tout ce qui attend ta review, avec le compteur de la barre de menus. L'en-tête dit d'abord combien,
+puis depuis quand. Chaque ligne se lit en deux temps : le titre, puis son contexte — dépôt, auteur,
+âge, raison, badges de risque (grosse PR, migration, fichiers sensibles). À droite, la CI et la
+taille ; au survol ou à la sélection, les actions prennent leur place sans rien déplacer. j et k
+circulent, Entrée ouvre, Espace ouvre le panneau Sujet.
+
+Le champ de recherche comprend des jetons — `repo:app`, `ci:rouge`, `auteur:…`, `âge>2j` — avec
+complétion ; un filtre actif s'affiche en puce supprimable. Ce qui bouge sans qu'on te l'ait demandé
+devient un signal, rangé derrière son bouton.
 
 ![Reviews](docs/screenshots/reviews.png)
 
@@ -61,6 +67,27 @@ pousser. ⇧Entrée ouvre une session, ⌘⇧N crée un workspace.
 Tes sessions Claude Code ; celles qui attendent une réponse passent devant.
 
 ![Agents](docs/screenshots/agents.png)
+
+## Le panneau Sujet
+
+Dans Reviews, Aujourd'hui, Mon travail, Todo et Workspaces, **Espace** ouvre un panneau à droite de
+la liste. Il la pousse au lieu de la recouvrir, suit la sélection, et dit où en est le sujet de la
+ligne : Carte → Branche → PR → CI → Review → Merge → Recette → Prod, l'étape en cours mise en
+avant, une étape bloquée en rouge. Dessous, la progression des critères d'acceptation, les risques
+détaillés, la CI et la taille.
+
+Il **ne charge rien** : il ne montre que ce que la vue a déjà en mémoire. Une étape dont la donnée
+n'est pas là est grisée d'un tiret plutôt que devinée. Tant qu'il est ouvert, un clic sur une ligne
+la sélectionne au lieu de l'ouvrir ; Entrée et le bouton « Ouvrir » ouvrent toujours.
+
+![Panneau Sujet](docs/screenshots/panneau-sujet.png)
+
+## Deux densités
+
+**Confortable** est la composition décrite ici : des lignes à deux temps, de l'air, un en-tête qui
+porte le compteur. **Compacte** garde une ligne d'information par élément, pour qui en parcourt
+beaucoup. Le bouton est dans la barre d'outils de Reviews et dans Réglages › Apparence ; changer
+d'ambiance ne touche pas à la densité.
 
 ## Qualité
 
@@ -182,15 +209,16 @@ Le thème d'origine, et le défaut : monochrome froid, un seul accent bleu, surf
 ![Précision](docs/screenshots/ambiance-precision.png)
 
 ### Cockpit
-Poste de pilotage sombre : accent teal, titres de section en mono, et un halo d'accent sur la ligne
-sélectionnée, les pastilles de CI et le bouton principal.
+Poste de pilotage sombre : accent teal, titres de section en mono, une lueur d'accent sur les
+panneaux, et un halo sur la ligne sélectionnée, les pastilles de CI, le bouton principal et le bord
+des dialogues.
 
 ![Cockpit](docs/screenshots/ambiance-cockpit.png)
 
 ### Verre
-Panneaux translucides sur un fond en dégradés, lignes de liste en cartes espacées, panneaux
-décollés des bords. Sur une webview qui ne sait pas flouter, les surfaces redeviennent opaques
-toutes seules.
+Panneaux translucides sur un fond en dégradés qui se voit autour d'eux et à travers eux, lignes de
+liste en cartes espacées, panneaux décollés des bords, dialogues voilés de la couleur du fond. Sur
+une webview qui ne sait pas flouter, les surfaces redeviennent opaques toutes seules.
 
 ![Verre](docs/screenshots/ambiance-verre.png)
 
@@ -200,7 +228,8 @@ tenir le contraste AA de 4,5:1 dans les deux variantes — pour les surfaces tra
 pire fond possible derrière elles — et le rouge et l'orange restent réservés à l'urgence réelle.
 `prefers-reduced-motion` coupe toute animation, quelle que soit l'ambiance choisie.
 
-Un thème s'exporte, s'importe et se partage par la configuration d'équipe.
+Un thème s'exporte, s'importe et se partage par la configuration d'équipe. Une ambiance déjà
+choisie suit ses évolutions : c'est sa version courante qui s'applique à chaque lancement.
 
 ## Visite guidée
 
